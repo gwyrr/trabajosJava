@@ -65,4 +65,10 @@ public class Datos {
         return informes;
     }
 
+    public static void inicializarDatos(List<Producto> productos, List<Pedido> pedidos, List<Usuario> usuarios, List<Informe> informes){
+        productos.addAll(inicializarProductos());
+        pedidos.addAll(inicializarPedidos());
+        usuarios.addAll(inicializarUsuarios());
+        Informe.addAll(inicializarInformes());
+    }
 }

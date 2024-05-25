@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ProyectoFinalPOO.Main.pedidos;
+
 public class Pedido {
 
     private int idPedido;
@@ -59,6 +61,31 @@ public class Pedido {
             this.estadoPedido = nuevoEstado;
         } else {
             System.out.println("Estado no válido. El estado debe ser Pendiente, Enviado o Entregado.");
+        }
+    }
+    static Pedido buscarPedidoPorId(int id) {
+        for (Pedido pedido : pedidos) {
+            if (pedido.getIdPedido() == id) {
+                return pedido;
+            }
+        }
+        return null;
+    }
+    public static void mostrarPedidos(List<Pedido> pedidos) {
+        System.out.println("Lista de Pedidos:");
+        for (Pedido pedido : pedidos) {
+            System.out.println("ID Pedido: " + pedido.getIdPedido());
+            System.out.println("Estado: " + pedido.getEstadoPedido());
+            System.out.println("Fecha y Hora: " + pedido.getFechaHora());
+            System.out.println("Productos Solicitados:");
+            for (Producto producto : pedido.getProductosSolicitados()) {
+                System.out.println("- ID: " + producto.getId() +
+                        ", Nombre: "
+                        + producto.getNombre() +
+                        ", Cantidad: "
+                        + producto.getCantidadEnTienda());
+            }
+            System.out.println("-------------------------");
         }
     }
 }
