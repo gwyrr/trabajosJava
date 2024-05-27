@@ -15,29 +15,29 @@ public class Menu {
             System.out.println("\nOpciones:");
             switch (rol.toLowerCase()) {
                 case "administrador":
-                    System.out.println("1. Agregar producto");
-                    System.out.println("2. Modificar producto");
-                    System.out.println("3. Eliminar producto");
-                    System.out.println("4. Gestionar pedidos");
-                    System.out.println("5. Confirmar envios");
-                    System.out.println("6. Generar informes");
-                    System.out.println("7. Administrar usuarios");
-                    System.out.println("8. Ver inventario");
-                    System.out.println("9. Salir de la cuenta");
-                    System.out.println("0. Salir");
+                    System.out.println("1. Agregar producto\n" +
+                            "2. Modificar producto\n" +
+                            "3. Eliminar producto\n" +
+                            "4. Gestionar pedidos\n" +
+                            "5. Confirmar envios\n" +
+                            "6. Generar informes\n" +
+                            "7. Administrar usuarios\n" +
+                            "8. Ver inventario\n" +
+                            "9. Salir de la cuenta\n" +
+                            "0. Salir\n");
                     break;
                 case "almacenero":
-                    System.out.println("1. Ver inventario");
-                    System.out.println("2. Gestionar pedidos");
-                    System.out.println("3. Confirmar envios");
-                    System.out.println("9. Salir de la cuenta");
-                    System.out.println("0. Salir");
+                    System.out.println("1. Ver inventario\n" +
+                            "2. Gestionar pedidos\n" +
+                            "3. Confirmar envios\n" +
+                            "9. Salir de la cuenta\n" +
+                            "0. Salir\n");
                     break;
                 case "contador":
-                    System.out.println("1. Ver inventario");
-                    System.out.println("2. Generar informes");
-                    System.out.println("9. Salir de la cuenta");
-                    System.out.println("0. Salir");
+                    System.out.println("1. Ver inventario\n" +
+                            "2. Generar informes\n" +
+                            "9. Salir de la cuenta\n" +
+                            "0. Salir\n");
                     break;
                 default:
                     System.out.println("Usuario no reconocido.");
